@@ -1,0 +1,33 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ludo Dice Game</title>
+    <link rel="stylesheet" href="ludo.css">
+</head>4
+<body>
+    <div class="game-container">
+        <h1>Ludo Dice Game</h1>
+        <div class="players">
+            <div class="player">
+                <h2>Player 1</h2>
+                <img id="dice1" src="onedice.png" alt="Dice" class="dice">
+                <p>Score: <span id="score1">0</span></p>
+            </div>
+            <div class="player">
+                <h2>Player 2</h2>
+                <img id="dice2" src="onedice.png" alt="Dice" class="dice">
+                <p>Score: <span id="score2">0</span></p>
+            </div>
+        </div>
+        <button id="rollDiceBtn">Roll Dice</button>
+      
+        <audio id="diceRollSound" src="dice-142528.mp3"></audio>
+
+        <h2 id="result"></h2>
+    </div>
+    <script src="ludo.js"></script>
+</body>
+</html>
