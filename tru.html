@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>NOTE APP</title>
+    <link rel="stylesheet" href="tru.css">
+</head>
+
+<body>
+    <div>
+        <h1>Note App</h1>
+        <input type="text" id="not" placeholder="Write your note">
+        <button class="rem" onclick="addNote()">save</button>
+        <div id="container"></div>
+
+
+        <script>
+            function addNote() {
+                const input = document.getElementById('not');
+                const text = input.value;
+                if (text) {
+                    let notes = JSON.parse(localStorage.getItem('notes')) || [];
+                    notes.push(text);
+                    localStorage.setItem('notes', JSON.stringify(notes));
+                    input.value = '';
+                    display();
+                }
+            }
+
+            function removeNote(index) {
+                let notes = JSON.parse(localStorage.getItem('notes')) || [];
+                notes.splice(index, 1);
+                localStorage.setItem('notes', JSON.stringify(notes));
+                display()
+            }
+
+            function display() {
+                const container = document.getElementById('container');
+                container.innerHTML = '';
+                const notes = JSON.parse(localStorage.getItem('notes')) || [];
+
+                notes.forEach((note, index) => {
+                    const noteDiv = document.createElement('div');
+                    noteDiv.classList.add('note');
+                    noteDiv.textContent = note;
+
+                    const deleteButton = document.createElement('button');
+                    deleteButton.classList.add('btn');
+                    deleteButton.textContent = 'Delete';
+
+                    const editButton = document.createElement('button');
+                    editButton.classList.add('btn');
+                    editButton.textContent = 'Edit';
+
+                    deleteButton.onclick = function () {
+                        removeNote(index); 
+                    }
+
+                    editButton.onclick = function () {
+                        const updatedNote = prompt("Edit your note:", note);
+                        if (updatedNote !== null) {
+                            notes[index] = updatedNote;
+                            localStorage.setItem('notes', JSON.stringify(notes));
+                            display();
+                        }
+                    }
+                    noteDiv.append(deleteButton, editButton);
+                    container.appendChild(noteDiv)
+                });
+            }
+
+            window.onload = display;
+        </script>
+    </div>
+</body>
+
+</html>

@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1>Writing Notes</h1>
+    <input type="text">
+    <h2></h2>
+
+    <script>
+       const input = document.querySelector('input'),
+        h2 = document.querySelector('h2')
+        h2.innerHTML = localStorage.getItem('value' || "");
+        input.addEventListener('keyup',display);
+
+        function display(){
+            localStorage.setItem('value', input.value);
+           h2.innerHTML = localStorage.getItem('value');
+           
+            h2.style.width = '100px'
+            h2.style.height = '100px'
+            h2.style.border = '2px solid black'
+        }
+
+    </script>
+</body>
+</html>

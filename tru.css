@@ -1,0 +1,27 @@
+#container{
+    padding: 2%;
+    margin-top: 1%;
+    width: 20%;
+    height: auto;
+    background-color: rgb(203, 189, 217);
+    border: 2px solid black;
+    border-radius: 10px;
+}
+
+.note{
+    color: brown;
+    background-color: blanchedalmond;
+    margin: 5%;
+    padding: 20px;
+}
+.btn{
+    padding: 8px;
+    margin-left: 100px;
+}
+input{
+    height: 30px;
+    width: 20%;
+}
+.rem{
+    height: 35px;
+}

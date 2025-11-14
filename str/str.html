@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+
+<body>
+  <h1 id="nav">heading</h1>
+  <p id="userData"></p>
+  <button onclick="changeHeading()">change</button>
+  <script>
+    // function changeHeading(){
+    //     var hew = document.getElementById('nav');         // dom
+    //     hew.textContent = 'heading after';
+    //     hew.style.color = 'blue';
+    // }
+
+    // document.addEventListener('keypress', function(event){         //event
+    //     if (event.key === '.')
+    //     changeHeading();
+    // })
+
+
+    // function dis(disnam){
+    //     console.log('hello');
+    //     disnam();
+    //     console.log('good morning');             //call back function
+    // } 
+    // dis( function(){
+    //     console.log('rahul');
+
+    // })
+
+
+
+
+
+    // let promise = new Promise((resolve, reject) => {
+    //     resolve("Promise resolved!");
+    // });                                  // promise Ansynchronous
+
+    // promise.then(message => console.log(message));
+    // console.log("End");
+
+
+
+    fetch("https://jsonplaceholder.typicode.com/posts/1")
+      .then(response => response.json())
+
+      .then(data => {
+        console.log(data)
+
+        document.getElementById("userData").innerHTML = data.body
+      })
+      .catch(error => console.log("Error:", error));
+
+
+  </script>
+</body>
+
+</html>

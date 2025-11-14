@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>callBack</title>
+</head>
+
+<body>
+    <h1>callBack function in JavaScript</h1>
+    <script>
+        function one() {
+            setTimeout(function () {
+
+                console.log('function 1');
+                two();
+            }, 3000);
+
+        }
+        function two() {
+            console.log('function 2');
+
+        }
+        function three() {
+            console.log('function 3');
+
+        }
+
+        one();
+     
+        function serverRequest(query, callback) {
+            setTimeout(function () {
+                var response = query + "full!";
+                callback(response);
+            }, 5000);
+        }
+        function getResults(results) {
+            console.log("Response from the server: " + results);
+        }
+
+     serverRequest("The glass is half ", getResults);
+
+
+    </script>
+</body>
+
+</html>

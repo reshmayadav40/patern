@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Color-Picker</title>
+
+    <style>
+        body {
+            background-color: bisque;
+        }
+        .pink-mode {
+            background-color: #eb7197;
+        }
+        .brown-mode {
+            background-color: #4a131b;
+        }
+        .equa-mode {
+            background-color: #71d8eb;
+        }
+        .blue-mode {
+            background-color: #303691;
+        }
+        .black-mode {
+            background-color: #000000;
+        }
+        #pink{
+            margin: 30px;
+            height: 80px;
+            width: 100px;
+            background-color: pink;
+        }
+        #brown{
+            margin: 30px;
+            height: 80px;
+            width: 100px;
+            background-color: brown;
+        }
+        #equa{
+            margin: 30px;
+            height: 80px;
+            width: 100px;
+            background-color: aqua;
+        }
+        #blue{
+            margin: 30px;
+            height: 80px;
+            width: 100px;
+            background-color: blue;
+        }
+        #black{
+            color: white;
+            margin: 30px;
+            height: 80px;
+            width: 100px;
+            background-color: black;
+        }
+        .main{
+           
+            margin: 50px;
+            display: flex;
+            flex-direction: row;
+            justify-content: center;
+            align-items: center;
+        }
+        h1{
+           margin-left: 780px;
+        }
+        button{
+            border: #000000 solid 2px;
+            border-radius: 10px;
+        }
+    </style>
+</head>
+<body>
+    <h1 id="h">Color Picker</h1>
+    <div class="main">
+       
+        <button id="pink">#eb7197</button>
+        <button id="brown">#4a131b</button>
+        <button id="equa">#71d8eb</button>
+        <button id="blue">#303691</button>
+        <button id="black">#000000</button>
+    </div>
+   
+
+    <script>
+        let h = document.getElementById('h')
+        document.querySelector('#pink').addEventListener('click', function(){
+            document.body.className = "pink-mode";
+        });
+
+        document.querySelector('#brown').addEventListener('click', function(){
+            document.body.className = "brown-mode";
+            h.style.color = 'white';
+        });
+
+        document.querySelector('#equa').addEventListener('click', function(){
+            document.body.className = "equa-mode";
+        });
+
+        document.querySelector('#blue').addEventListener('click', function(){
+            document.body.className = "blue-mode";
+        });
+
+        document.querySelector('#black').addEventListener('click', function(){
+            document.body.className = "black-mode";
+            h.style.color = 'white';
+        });
+    </script>
+
+</body>
+</html>

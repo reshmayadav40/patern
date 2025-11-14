@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>listener</title>
+    <style>
+        body {
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+        }
+
+        .grandparents {
+            height: 400px;
+            width: 400px;
+            background-color: blue;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+        }
+
+        .parents {
+            height: 300px;
+            width: 300px;
+            background-color: pink;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+        }
+
+        .child {
+            height: 200px;
+            width: 200px;
+            background-color: red;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="grandparents">
+        <div class="parents">
+            <div class="child">
+                <button id="msg">Hello</button>
+            </div>
+        </div>
+    </div>
+
+    <script>
+        // let grand = document.querySelector('.grandparents');
+        // let parent = document.querySelector('.grandparents');
+        // let child = document.querySelector('.grandparents');
+
+        // grand.addEventListener('click', e => {
+        //     console.log('grandparents 1');
+
+        // });
+        // parent.addEventListener('click', e => {
+        //     console.log('parents 2');
+
+        // })
+        // child.addEventListener('click', e => {
+        //     console.log('child 3');
+
+        // })
+        // document.addEventListener('click', e => {
+        //     console.log('document 1');
+
+        // })
+        let sms = document.querySelector('#msg');
+        msg.addEventListener("keypress", (event) => {
+            sms.textContent = 'ram'
+        });
+
+
+    </script>
+</body>
+
+</html>

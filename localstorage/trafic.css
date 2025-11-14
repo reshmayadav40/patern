@@ -1,0 +1,36 @@
+.traffic{
+    height: 35vh;
+    width: 8vw;
+    margin-left: 20px;
+    padding-left: 30px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    border: 5px solid black;
+    border-radius: 100px;
+    background-color: rgb(3, 29, 20);
+}
+button{
+    height: 40px;
+    width: 70px;
+    margin: 30px;
+    border-radius: 10px;
+    background-color: rgb(130, 134, 137);
+}
+button:hover{
+    background-color: orange;
+}
+.bulb{
+    height: 50px;
+    width: 50px;
+    border-radius: 50px;
+    margin: 10px;
+    background-color: rgb(196, 187, 187);
+}
+.cont{
+    background-color: rgb(135, 203, 203);
+    height: 600px;
+    width: 30vw;
+    margin-left: 600px;
+    border-radius: 10px;
+}

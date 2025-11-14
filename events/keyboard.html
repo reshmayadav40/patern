@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+
+    <div>
+        <button id="btn"> Start</button>
+        <input type="text" id="message">
+    </div>
+    <script>
+        let myButton = document.getElementById("btn");
+
+        myButton.onclick = function () {
+            alert("Button Clicked!");
+        };
+        myButton.addEventListener('keypress', function(event){
+            console.log('key pressed ' + event.key);
+            myButton.textContent = 'hiiiiiii'
+            if (event.key == 'a' && event.ctrlKey + A){
+                console.log('You pressed ctrl + A');
+                
+            }
+            
+        });
+
+
+     
+
+    </script>
+</body>
+
+</html>
